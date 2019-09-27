@@ -1,0 +1,25 @@
+{
+    "name": "joeyrush/eager-joins",
+    "description": "Eager load your eloquent relationships using joins instead of separate queries",
+    "require": {
+        "fico7489/laravel-eloquent-join": "^4.0"
+    },
+    "authors": [
+        {
+            "name": "Joe Rushton",
+            "email": "joe_rushton@hotmail.co.uk",
+            "homepage": "https://joerushton.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/joeyrush/eager-joins",
+    "license": "MIT",
+    "require": {
+        "php": "^7.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "JoeyRush\\EagerJoins\\": "src"
+        },
+    }
+}
