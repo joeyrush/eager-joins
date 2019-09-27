@@ -15,7 +15,7 @@
     "homepage": "https://github.com/joeyrush/eager-joins",
     "license": "MIT",
     "require": {
-        "php": "^7.0",
+        "php": "^7.0"
     },
     "autoload": {
         "psr-4": {
