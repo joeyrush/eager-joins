@@ -35,32 +35,36 @@ And now you can eager-load using joins by calling the `include($relationName)` m
 
 ```php
 // The following will return all posts, each with their associated category pre-loaded.
-$posts = App\Models\Post::include('category')->get();
+$posts = Post::include('category')->get();
 ```
 
 ## Examples
 
 ### Hydrate related models
-```php
-// By default, the relationship fields will be stored on the original model, 
-// e.g. the following will return Post models with category_name and category_id stored directly on the model.
-$posts = App\Models\Post::include('category')->get();
+By default, the relationship fields will be stored on the original model, e.g. the following will return `Post` models with `category_name` and `category_id` stored directly on the model.
 
-// If you'd like to have the related models hydrated and linked up correctly, you can call `populateRelationships()`
-// Note: the larger the data set, the more of a performance penalty this will incur.
-$posts = App\Models\Post::populateRelationships()->include('category')->get();
+```php
+$posts = Post::include('category')->get();
+```
+
+If you'd like to have the related models hydrated and linked up correctly, you can call `populateRelationships()`
+
+> Note: the larger the data set, the more of a performance penalty this will incur.
+
+```php
+$posts = Post::populateRelationships()->include('category')->get();
 ```
 
 ### Nested relationships
 You can use dot notation to eager-load nested relations. **This only works on HasOne and BelongsTo relationships**
 ```php
-$posts = App\Models\Post::include('category.creator.profile')->get();
+$posts = Post::include('category.creator.profile')->get();
 ```
 
 ### Multiple Eager-Loads
 You can eager load as many relationships as needed
 ```php
-$posts = App\Models\Post::query()
+$posts = Post::query()
 	->include('category.creator.profile')
 	->include('tags')
 	->include('author')
