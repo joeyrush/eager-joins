@@ -1,3 +1,8 @@
+# Disclaimer
+What this package was originally intended to do has been much better executed with this alternative package: https://github.com/kirschbaum-development/eloquent-power-joins.
+
+One area that I explore here that is lacking from the aforementioned package is the hydration of related models. However my implementation is far from optimized so I would only use this package as a proof-of-concept.
+
 # Eager Join
 Eager-load your eloquent relationships in Laravel using joins instead of separate queries.
 
